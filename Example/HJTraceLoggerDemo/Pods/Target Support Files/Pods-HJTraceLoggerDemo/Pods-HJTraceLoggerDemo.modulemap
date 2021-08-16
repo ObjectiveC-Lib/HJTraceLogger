@@ -1,6 +1,0 @@
-framework module Pods_HJTraceLoggerDemo {
-  umbrella header "Pods-HJTraceLoggerDemo-umbrella.h"
-
-  export *
-  module * { export * }
-}
