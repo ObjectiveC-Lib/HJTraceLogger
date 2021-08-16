@@ -1,0 +1,1099 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03C2D5535270237F3D0621662761101F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3E2CFC018645073A163F528D70531D /* Foundation.framework */; };
+		083B591FAB61EFF81DBB9E753C9156AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3E2CFC018645073A163F528D70531D /* Foundation.framework */; };
+		0FBA369F14E7A0A0D8DB681E150C79EB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D0DD0A2312D051083B97199F3D57E2 /* CoreFoundation.framework */; };
+		1233E1BA8ECB6B22193AC2D0E7F83724 /* XLFacility-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F6801CC2914B946D9080A07E4F7FE9 /* XLFacility-dummy.m */; };
+		128F3BF7DEDB6D4D5B2020FBEFCE8B47 /* XLUIKitOverlayLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C8ADD98E20E4683F5BCC0F5D9D33B2FE /* XLUIKitOverlayLogger.m */; };
+		1CC35B6C221740709D0161A3C9295834 /* XLTelnetServerLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DDD51D977BBEDFF26F0380EFA376A2 /* XLTelnetServerLogger.m */; };
+		1E7C638C7F012780C75F3B40B23E8B51 /* NSMutableString+ANSI.h in Headers */ = {isa = PBXBuildFile; fileRef = 65BD2B2A0913C59DF6EAB2DB57E68102 /* NSMutableString+ANSI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F5A3406C288221BA5734538A6E6666E /* XLLogRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F8EE2BDD9A0660E57523DB7E53F487 /* XLLogRecord.m */; };
+		24AFF331CC6CD2937859EF07655F4599 /* HJTraceLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E92D410501435F36CA3EDEE671C359A /* HJTraceLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		262256B449B7B70145C4CC45B06029BD /* XLUIKitOverlayLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 63522009D8A25A421222DE6EAEC20162 /* XLUIKitOverlayLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		28EC132E8057F8AB32DB63447A87398F /* Pods-HJTraceLoggerDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E98503732B4F8B59C1F085DC4C4B30 /* Pods-HJTraceLoggerDemo-dummy.m */; };
+		2D0894BA0C5D41D81919296636CA499A /* XLDatabaseLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C4A9D4F02F68BA63936B6C40F35C399 /* XLDatabaseLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		325395593AF0FE71DE8D2BE12E0D369B /* XLCallbackLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C06A028EFB90BE30E47FAE6847160C6 /* XLCallbackLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3834ED085A6F19027E3A2722C7D7963A /* XLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = B60805257832E291A2ED0E52106E3909 /* XLLogger.m */; };
+		3D0716238A51E4D27D4568E451E4CCD9 /* Pods-HJTraceLoggerDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 652D754C5EF12FEB7AB9E0CB624B1F56 /* Pods-HJTraceLoggerDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D93A2FF24A4C3788078776B96B317FA /* XLDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F730A579BF4E693F22005EA68BED81BF /* XLDatabaseLogger.m */; };
+		3F0FB6232BAA4BCDACDFEBE9D82E8C66 /* XLTCPClientLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 074BEA8948B0B2A079C415ED02E0360B /* XLTCPClientLogger.m */; };
+		3FA894F2F4C379564036D5BBFC786FCD /* GCDTCPServer.h in Headers */ = {isa = PBXBuildFile; fileRef = FEACFF09CB30B82A157075147455E0D6 /* GCDTCPServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40AAA3906C2CE418B2358260498C5EFC /* XLFacilityPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A18B17B6BE035129A41DC9C539C7051 /* XLFacilityPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		40C15568356220062DE2D1952C0D5F57 /* XLFacility.m in Sources */ = {isa = PBXBuildFile; fileRef = A070E8D946EF37E5C077BDEC540163EE /* XLFacility.m */; };
+		455E86E20585521857E7E1D62CC708A5 /* XLFacility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5BCF3EBAB8606D84F82470311E443C /* XLFacility.framework */; };
+		457E53ECAEDEF7BF95A7393C00D0D49D /* XLCallbackLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = FA581D604E20BD4599AE7E7682E176BC /* XLCallbackLogger.m */; };
+		45A3A10EA649CF0D14E28AECDCC71763 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3E2CFC018645073A163F528D70531D /* Foundation.framework */; };
+		4A0B614974129378CD3656E9E64B22B7 /* XLLogRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DFE1BF98FB66862BC93994F3100C6AE /* XLLogRecord.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A263A08BF589D95F96206DB09836A81 /* GCDTCPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B3C9F66F15462BE1451E74B05CD856 /* GCDTCPConnection.m */; };
+		4E600217D910F9558808AD4CB5FAFA74 /* GCDTelnetConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0767F22BAAC811AD49EAED9B5D4DBD /* GCDTelnetConnection.m */; };
+		4F0A0C9822D64FE5A8497E85DE346E1A /* XLFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1338185D9B4B82E22A3498CC833C0EE8 /* XLFunctions.m */; };
+		51942896AEBB7A08F6657111363D41F9 /* XLASLLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 70D7AD21DDCB23E666CE1CCCC0964ED5 /* XLASLLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		547470E9FC36A1F1CEBE3CBFFCCC9220 /* GCDTelnetLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BE70A27C2966D27CC3BB456C676F9F3 /* GCDTelnetLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		548DFDAE14D64629FD7F139E61C5ECB4 /* XLFacility.h in Headers */ = {isa = PBXBuildFile; fileRef = E666A2172E62EBB68A011B59386628D4 /* XLFacility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59FCE4EF33BCFA46DAF0E124A36E8D1A /* XLHTTPServerLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = B2692043378C872E20429C142187C254 /* XLHTTPServerLogger.m */; };
+		5E778AB4D91BE0914233556862D0A569 /* XLLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F7CEE229EC6A9BB0FA034B05E2599D8 /* XLLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EBAA2867192E4445141DD3A8412DB7A /* XLTCPServerLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 45774F570F3330C11E57D431A65F2828 /* XLTCPServerLogger.m */; };
+		62B48A27F854B1030CBF1ABE09AA34B9 /* XLASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B29662B618FE6796BE7A3B719F08813 /* XLASLLogger.m */; };
+		672C4575E7F88AA089ABDC896C3558FC /* XLFileLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = AFE7CC616C01420C41F795142F96AD9C /* XLFileLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71DA842D765C2953768F420979BE17CC /* GCDNetworkingLoggingBridgePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E259B67E7DC05B842F0EA4C09A75B5A /* GCDNetworkingLoggingBridgePrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		741067DE3487234055EF558C2E19563F /* XLHTTPServerLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 22DC74B2B85D823D84D18B5AF3FE4F5C /* XLHTTPServerLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		828D87C3ADCF1D17CC15CDD858B13464 /* XLFacilityMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = C1A6C387DF59AB35CDF15429FB7F257A /* XLFacilityMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94131920B1D1C3C19D9341AF2EC6B584 /* HJHTTPServerLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C4ED125EDF0F237D2C23CAFDA8B4BE32 /* HJHTTPServerLogger.m */; };
+		9B3E71A753282BA7E05161F0E79F5E9F /* GCDTCPPeer.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A62A7805BE06B8BDC3E68A6C6B5CCA /* GCDTCPPeer.m */; };
+		A1F79B59F6ACE0AF5EE4AB5B5C81DCE7 /* XLTCPClientLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 53D5AC8E6C66D67F4F063D5897DA47B0 /* XLTCPClientLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A38897CDDF449CD81C04BDAAB7BFE8F7 /* GCDTCPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = DD77864F5D1E793405584B2E29ED36A3 /* GCDTCPServer.m */; };
+		A6046350F048EEE7300D25364753C673 /* XLTCPServerLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = A8606E414B15E3118B3FE9696DB111B1 /* XLTCPServerLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A97E48FA7D5E00288BA2A4AF6650F31E /* XLFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = FA43AE21DAF3AD6EB6E5A43D5010019A /* XLFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B946537D91EB35DA28E27B811D37020B /* XLStandardLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 724A669B385C8945F6E682DC7EA05B85 /* XLStandardLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB2DA9C572744CFF865ED4F58736483D /* GCDTelnetServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 224A9F92EF16FC273B53E8896D812B21 /* GCDTelnetServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD015C2A359D6D1A0FA6FE25DD90D7C6 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBF106FB3665B46BE493F69D9AB03FF /* CFNetwork.framework */; };
+		BDF289E0BB177E97FFCA9C712709585B /* XLTelnetServerLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 4645749185C7D3FEA36A8B99DD8D133E /* XLTelnetServerLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1D6EE29BBDE06F61AFCC469F46A61AE /* HJTraceLoggerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EFBA5CDD49CCBCBCF549410B8579810 /* HJTraceLoggerManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3A2B884713BD070FCAEDBE1D526FA87 /* GCDTelnetServer.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA5D94E7571BC32AFA5F3764839D763 /* GCDTelnetServer.m */; };
+		C4FC9A09A2D95FDDACFC498D93D5E30E /* HJHTTPServerLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = C46BDFFEF351713619F157952C55FE8F /* HJHTTPServerLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4FF10770787BA949D21F2199A706C1F /* NSMutableString+ANSI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD5251E48D83DC4E9C2E859BB4961D2 /* NSMutableString+ANSI.m */; };
+		D027CC18C4399CA4D82A3A40A24DB442 /* XLFacility-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FC018350C93D32C1734D9108980DC9A /* XLFacility-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D141E8D8854A4E7D396A5D7CBAD9094A /* GCDTCPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 68F247DAE663255BA4EFC87CFB3D8364 /* GCDTCPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3CFF7FB0210DDACFAEAFFD9806B7261 /* GCDTelnetLoggingBridgePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = E7247902852FCE5A8B2FC074ADD9FEB9 /* GCDTelnetLoggingBridgePrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D5EC55EE1157E5813B4D35134EF6C793 /* GCDTCPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A39ED7168F20E2B5479FC252E68646D4 /* GCDTCPClient.m */; };
+		D99F55F643EDE212A73A3161FE72AAF2 /* GCDTelnetPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CB814A86F76AF3F8B0DA9CABD92907B4 /* GCDTelnetPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		E147AE4300BA83372367834796836EDE /* GCDTCPPeer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CA5E6B3C50800961EA7FADC7A64B1D2 /* GCDTCPPeer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E32ADCF77AD5A2A3E137B3CA3CFFB534 /* GCDNetworkingPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = FE1368F58B9EAAF49DD19D4F7860E9B0 /* GCDNetworkingPrivate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		E36E6684D66C9F3D8D5924664168C3D9 /* GCDTelnetConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A148C209F7AEFA303174EA2DC380150 /* GCDTelnetConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5123B87461DBA55F490C57DA8C38A29 /* HJTraceLogger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3A4D1C27483C43C767A52106078380 /* HJTraceLogger-dummy.m */; };
+		E78F145206EC1C89A720D051AE0CA8D6 /* GCDTCPConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = DE1F45B797621E284CDBE27AD1A655E9 /* GCDTCPConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8DF9F9B1B8CB0A391F08A1141D88629 /* HJTraceLogger-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4193D7E4580658DAA3CEA887D89C4F1C /* HJTraceLogger-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB67326B906273D79403075EF59C38FF /* GCDNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 875CC654D7937D437BC46F99892306C1 /* GCDNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7B1ED78491E09C3C673CA9BE5A9FC64 /* HJTraceLoggerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A321EAE016B6EEFD05DD2DF69E8024 /* HJTraceLoggerManager.m */; };
+		F9C1C803158474E243D56A4433FE0E85 /* XLStandardLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 684E9EDF88314BE832785CC28390BFF3 /* XLStandardLogger.m */; };
+		FAC0FA3C4AB14D0617E1049CE10EE853 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93E8A466946C6E683A906E2AFA3FA636 /* CoreGraphics.framework */; };
+		FB83B513CCF3F1BD64B0705A6BE519DA /* XLFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB76763B99B31CEFA425BEBE73C8DD /* XLFileLogger.m */; };
+		FC3B26B09FF1601F41C9474EFDD6E1D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A490530C2C9957CF884F2D8A37D623F /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0657798A7A9185258DCFA185F7932A1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D89159F4F731EB4929A6789C9A90980;
+			remoteInfo = XLFacility;
+		};
+		200E353D8FB4C291C83F0B819BAC8C9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AF7B31D8C104CA673DCA6332275EAC7;
+			remoteInfo = HJTraceLogger;
+		};
+		26746C227640D92FEC79856D82423F13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D89159F4F731EB4929A6789C9A90980;
+			remoteInfo = XLFacility;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05E380C9717BB03685F926E8EF219C6A /* Pods-HJTraceLoggerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HJTraceLoggerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		074BEA8948B0B2A079C415ED02E0360B /* XLTCPClientLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XLTCPClientLogger.m; path = XLFacility/Networking/XLTCPClientLogger.m; sourceTree = "<group>"; };
+		0803AA9E6FD6C80416F8EE36B6F47572 /* Pods-HJTraceLoggerDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HJTraceLoggerDemo.modulemap"; sourceTree = "<group>"; };
+		0BE70A27C2966D27CC3BB456C676F9F3 /* GCDTelnetLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDTelnetLogging.h; path = GCDTelnetServer/GCDTelnetServer/GCDTelnetLogging.h; sourceTree = "<group>"; };
+		0C06A028EFB90BE30E47FAE6847160C6 /* XLCallbackLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XLCallbackLogger.h; path = XLFacility/Core/XLCallbackLogger.h; sourceTree = "<group>"; };
+		0E92D410501435F36CA3EDEE671C359A /* HJTraceLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HJTraceLogger.h; path = HJTraceLogger/HJTraceLogger.h; sourceTree = "<group>"; };
+		1338185D9B4B82E22A3498CC833C0EE8 /* XLFunctions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XLFunctions.m; path = XLFacility/Core/XLFunctions.m; sourceTree = "<group>"; };
+		1A18B17B6BE035129A41DC9C539C7051 /* XLFacilityPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XLFacilityPrivate.h; path = XLFacility/Core/XLFacilityPrivate.h; sourceTree = "<group>"; };
+		224A9F92EF16FC273B53E8896D812B21 /* GCDTelnetServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDTelnetServer.h; path = GCDTelnetServer/GCDTelnetServer/GCDTelnetServer.h; sourceTree = "<group>"; };
+		22DC74B2B85D823D84D18B5AF3FE4F5C /* XLHTTPServerLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XLHTTPServerLogger.h; path = XLFacility/Networking/XLHTTPServerLogger.h; sourceTree = "<group>"; };
+		24820FDEB0F7ED27ADBF80E3E7FBEEA0 /* HJTraceLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HJTraceLogger.framework; path = HJTraceLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A490530C2C9957CF884F2D8A37D623F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		2DFE1BF98FB66862BC93994F3100C6AE /* XLLogRecord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XLLogRecord.h; path = XLFacility/Core/XLLogRecord.h; sourceTree = "<group>"; };
+		33F98DD3B01521A53381861845F9A4A5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		3F7CEE229EC6A9BB0FA034B05E2599D8 /* XLLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XLLogger.h; path = XLFacility/Core/XLLogger.h; sourceTree = "<group>"; };
+		4193D7E4580658DAA3CEA887D89C4F1C /* HJTraceLogger-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HJTraceLogger-umbrella.h"; sourceTree = "<group>"; };
+		45774F570F3330C11E57D431A65F2828 /* XLTCPServerLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XLTCPServerLogger.m; path = XLFacility/Networking/XLTCPServerLogger.m; sourceTree = "<group>"; };
+		4645749185C7D3FEA36A8B99DD8D133E /* XLTelnetServerLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XLTelnetServerLogger.h; path = XLFacility/Networking/XLTelnetServerLogger.h; sourceTree = "<group>"; };
+		4A148C209F7AEFA303174EA2DC380150 /* GCDTelnetConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDTelnetConnection.h; path = GCDTelnetServer/GCDTelnetServer/GCDTelnetConnection.h; sourceTree = "<group>"; };
+		53D5AC8E6C66D67F4F063D5897DA47B0 /* XLTCPClientLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XLTCPClientLogger.h; path = XLFacility/Networking/XLTCPClientLogger.h; sourceTree = "<group>"; };
+		55A321EAE016B6EEFD05DD2DF69E8024 /* HJTraceLoggerManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HJTraceLoggerManager.m; path = HJTraceLogger/HJTraceLoggerManager.m; sourceTree = "<group>"; };
+		56A62A7805BE06B8BDC3E68A6C6B5CCA /* GCDTCPPeer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDTCPPeer.m; path = GCDTelnetServer/GCDNetworking/GCDNetworking/GCDTCPPeer.m; sourceTree = "<group>"; };
+		5FFB76763B99B31CEFA425BEBE73C8DD /* XLFileLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XLFileLogger.m; path = XLFacility/Core/XLFileLogger.m; sourceTree = "<group>"; };
+		61D0DD0A2312D051083B97199F3D57E2 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		63522009D8A25A421222DE6EAEC20162 /* XLUIKitOverlayLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XLUIKitOverlayLogger.h; path = XLFacility/UserInterface/XLUIKitOverlayLogger.h; sourceTree = "<group>"; };
+		652D754C5EF12FEB7AB9E0CB624B1F56 /* Pods-HJTraceLoggerDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HJTraceLoggerDemo-umbrella.h"; sourceTree = "<group>"; };
+		65BD2B2A0913C59DF6EAB2DB57E68102 /* NSMutableString+ANSI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableString+ANSI.h"; path = "GCDTelnetServer/GCDTelnetServer/NSMutableString+ANSI.h"; sourceTree = "<group>"; };
+		684E9EDF88314BE832785CC28390BFF3 /* XLStandardLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XLStandardLogger.m; path = XLFacility/Core/XLStandardLogger.m; sourceTree = "<group>"; };
+		68F247DAE663255BA4EFC87CFB3D8364 /* GCDTCPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDTCPClient.h; path = GCDTelnetServer/GCDNetworking/GCDNetworking/GCDTCPClient.h; sourceTree = "<group>"; };
+		6A215090DC20C169BE8A669DF57DDD1F /* HJTraceLogger.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = HJTraceLogger.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6A28C324A87F3C954AAF8B8B6C8ADF0C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		6B3E2CFC018645073A163F528D70531D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6CE82D5C3B23CF0AABC842FA5C2B6416 /* XLFacility-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "XLFacility-Info.plist"; sourceTree = "<group>"; };
+		6DD5251E48D83DC4E9C2E859BB4961D2 /* NSMutableString+ANSI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableString+ANSI.m"; path = "GCDTelnetServer/GCDTelnetServer/NSMutableString+ANSI.m"; sourceTree = "<group>"; };
+		6E259B67E7DC05B842F0EA4C09A75B5A /* GCDNetworkingLoggingBridgePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDNetworkingLoggingBridgePrivate.h; path = GCDTelnetServer/GCDNetworking/GCDNetworking/GCDNetworkingLoggingBridgePrivate.h; sourceTree = "<group>"; };
+		70D7AD21DDCB23E666CE1CCCC0964ED5 /* XLASLLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XLASLLogger.h; path = XLFacility/Core/XLASLLogger.h; sourceTree = "<group>"; };
+		724A669B385C8945F6E682DC7EA05B85 /* XLStandardLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XLStandardLogger.h; path = XLFacility/Core/XLStandardLogger.h; sourceTree = "<group>"; };
+		77B3C9F66F15462BE1451E74B05CD856 /* GCDTCPConnection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDTCPConnection.m; path = GCDTelnetServer/GCDNetworking/GCDNetworking/GCDTCPConnection.m; sourceTree = "<group>"; };
+		7B29662B618FE6796BE7A3B719F08813 /* XLASLLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XLASLLogger.m; path = XLFacility/Core/XLASLLogger.m; sourceTree = "<group>"; };
+		7CA5E6B3C50800961EA7FADC7A64B1D2 /* GCDTCPPeer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDTCPPeer.h; path = GCDTelnetServer/GCDNetworking/GCDNetworking/GCDTCPPeer.h; sourceTree = "<group>"; };
+		856CB53ECFA8E153D08A2B98EB809119 /* Pods-HJTraceLoggerDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HJTraceLoggerDemo-frameworks.sh"; sourceTree = "<group>"; };
+		875CC654D7937D437BC46F99892306C1 /* GCDNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDNetworking.h; path = GCDTelnetServer/GCDNetworking/GCDNetworking/GCDNetworking.h; sourceTree = "<group>"; };
+		8AD5A7E7785E8B67F83CE85D5F1041ED /* XLFacility.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLFacility.release.xcconfig; sourceTree = "<group>"; };
+		8AFE520D3BB562214A8B15C31D71B20D /* XLFacility-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLFacility-prefix.pch"; sourceTree = "<group>"; };
+		8C4A9D4F02F68BA63936B6C40F35C399 /* XLDatabaseLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XLDatabaseLogger.h; path = XLFacility/Core/XLDatabaseLogger.h; sourceTree = "<group>"; };
+		8EFBA5CDD49CCBCBCF549410B8579810 /* HJTraceLoggerManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HJTraceLoggerManager.h; path = HJTraceLogger/HJTraceLoggerManager.h; sourceTree = "<group>"; };
+		8F5BCF3EBAB8606D84F82470311E443C /* XLFacility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XLFacility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FC018350C93D32C1734D9108980DC9A /* XLFacility-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLFacility-umbrella.h"; sourceTree = "<group>"; };
+		93E8A466946C6E683A906E2AFA3FA636 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E0767F22BAAC811AD49EAED9B5D4DBD /* GCDTelnetConnection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDTelnetConnection.m; path = GCDTelnetServer/GCDTelnetServer/GCDTelnetConnection.m; sourceTree = "<group>"; };
+		A070E8D946EF37E5C077BDEC540163EE /* XLFacility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XLFacility.m; path = XLFacility/Core/XLFacility.m; sourceTree = "<group>"; };
+		A0E98503732B4F8B59C1F085DC4C4B30 /* Pods-HJTraceLoggerDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HJTraceLoggerDemo-dummy.m"; sourceTree = "<group>"; };
+		A39ED7168F20E2B5479FC252E68646D4 /* GCDTCPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDTCPClient.m; path = GCDTelnetServer/GCDNetworking/GCDNetworking/GCDTCPClient.m; sourceTree = "<group>"; };
+		A8606E414B15E3118B3FE9696DB111B1 /* XLTCPServerLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XLTCPServerLogger.h; path = XLFacility/Networking/XLTCPServerLogger.h; sourceTree = "<group>"; };
+		AEBF106FB3665B46BE493F69D9AB03FF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		AFE7CC616C01420C41F795142F96AD9C /* XLFileLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XLFileLogger.h; path = XLFacility/Core/XLFileLogger.h; sourceTree = "<group>"; };
+		B0C44813C1EFD6CF429D45FF3B10163B /* HJTraceLogger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HJTraceLogger-prefix.pch"; sourceTree = "<group>"; };
+		B2692043378C872E20429C142187C254 /* XLHTTPServerLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XLHTTPServerLogger.m; path = XLFacility/Networking/XLHTTPServerLogger.m; sourceTree = "<group>"; };
+		B31BBABEF45986994D49B59A3276705C /* HJTraceLogger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HJTraceLogger.modulemap; sourceTree = "<group>"; };
+		B60805257832E291A2ED0E52106E3909 /* XLLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XLLogger.m; path = XLFacility/Core/XLLogger.m; sourceTree = "<group>"; };
+		C01A96898605978FD3858FAB12F7FF78 /* Pods_HJTraceLoggerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HJTraceLoggerDemo.framework; path = "Pods-HJTraceLoggerDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0F8C0E50C3AD8BC74977632D015F426 /* Pods-HJTraceLoggerDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HJTraceLoggerDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C1A6C387DF59AB35CDF15429FB7F257A /* XLFacilityMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XLFacilityMacros.h; path = XLFacility/Core/XLFacilityMacros.h; sourceTree = "<group>"; };
+		C1DDD51D977BBEDFF26F0380EFA376A2 /* XLTelnetServerLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XLTelnetServerLogger.m; path = XLFacility/Networking/XLTelnetServerLogger.m; sourceTree = "<group>"; };
+		C2180B58858F7DD3249C104512D66D9F /* HJTraceLogger-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HJTraceLogger-Info.plist"; sourceTree = "<group>"; };
+		C46BDFFEF351713619F157952C55FE8F /* HJHTTPServerLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HJHTTPServerLogger.h; path = HJTraceLogger/HJHTTPServerLogger.h; sourceTree = "<group>"; };
+		C4ED125EDF0F237D2C23CAFDA8B4BE32 /* HJHTTPServerLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HJHTTPServerLogger.m; path = HJTraceLogger/HJHTTPServerLogger.m; sourceTree = "<group>"; };
+		C8ADD98E20E4683F5BCC0F5D9D33B2FE /* XLUIKitOverlayLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XLUIKitOverlayLogger.m; path = XLFacility/UserInterface/XLUIKitOverlayLogger.m; sourceTree = "<group>"; };
+		C8F6801CC2914B946D9080A07E4F7FE9 /* XLFacility-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLFacility-dummy.m"; sourceTree = "<group>"; };
+		CB814A86F76AF3F8B0DA9CABD92907B4 /* GCDTelnetPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDTelnetPrivate.h; path = GCDTelnetServer/GCDTelnetServer/GCDTelnetPrivate.h; sourceTree = "<group>"; };
+		CC36E9B8B59413A3D0BBAF767211597F /* XLFacility.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLFacility.debug.xcconfig; sourceTree = "<group>"; };
+		CEA5D94E7571BC32AFA5F3764839D763 /* GCDTelnetServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDTelnetServer.m; path = GCDTelnetServer/GCDTelnetServer/GCDTelnetServer.m; sourceTree = "<group>"; };
+		D3F8EE2BDD9A0660E57523DB7E53F487 /* XLLogRecord.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XLLogRecord.m; path = XLFacility/Core/XLLogRecord.m; sourceTree = "<group>"; };
+		D8A1C26E67FED0956B203433D6DC8874 /* XLFacility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XLFacility.framework; path = XLFacility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD77864F5D1E793405584B2E29ED36A3 /* GCDTCPServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDTCPServer.m; path = GCDTelnetServer/GCDNetworking/GCDNetworking/GCDTCPServer.m; sourceTree = "<group>"; };
+		DE1F45B797621E284CDBE27AD1A655E9 /* GCDTCPConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDTCPConnection.h; path = GCDTelnetServer/GCDNetworking/GCDNetworking/GCDTCPConnection.h; sourceTree = "<group>"; };
+		E1E3D0BEED38FBEBC534A13974A251D8 /* HJTraceLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HJTraceLogger.release.xcconfig; sourceTree = "<group>"; };
+		E666A2172E62EBB68A011B59386628D4 /* XLFacility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XLFacility.h; path = XLFacility/Core/XLFacility.h; sourceTree = "<group>"; };
+		E7247902852FCE5A8B2FC074ADD9FEB9 /* GCDTelnetLoggingBridgePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDTelnetLoggingBridgePrivate.h; path = GCDTelnetServer/GCDTelnetServer/GCDTelnetLoggingBridgePrivate.h; sourceTree = "<group>"; };
+		EA8554B44C6AEEB03BEA32D28D51EC04 /* HJTraceLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HJTraceLogger.debug.xcconfig; sourceTree = "<group>"; };
+		EB3A4D1C27483C43C767A52106078380 /* HJTraceLogger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HJTraceLogger-dummy.m"; sourceTree = "<group>"; };
+		EE0D3F2161814B396864B46429B68C3A /* Pods-HJTraceLoggerDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HJTraceLoggerDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		F399420FD39ED633777F68776F05778D /* XLFacility.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XLFacility.modulemap; sourceTree = "<group>"; };
+		F486DC400EC76866A8E49460532550F0 /* Pods-HJTraceLoggerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HJTraceLoggerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		F730A579BF4E693F22005EA68BED81BF /* XLDatabaseLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XLDatabaseLogger.m; path = XLFacility/Core/XLDatabaseLogger.m; sourceTree = "<group>"; };
+		FA43AE21DAF3AD6EB6E5A43D5010019A /* XLFunctions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XLFunctions.h; path = XLFacility/Core/XLFunctions.h; sourceTree = "<group>"; };
+		FA581D604E20BD4599AE7E7682E176BC /* XLCallbackLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XLCallbackLogger.m; path = XLFacility/Core/XLCallbackLogger.m; sourceTree = "<group>"; };
+		FDC35C9D3D8691E5D54C1D46C33000FD /* Pods-HJTraceLoggerDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HJTraceLoggerDemo-Info.plist"; sourceTree = "<group>"; };
+		FE1368F58B9EAAF49DD19D4F7860E9B0 /* GCDNetworkingPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDNetworkingPrivate.h; path = GCDTelnetServer/GCDNetworking/GCDNetworking/GCDNetworkingPrivate.h; sourceTree = "<group>"; };
+		FEACFF09CB30B82A157075147455E0D6 /* GCDTCPServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDTCPServer.h; path = GCDTelnetServer/GCDNetworking/GCDNetworking/GCDTCPServer.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		977E76D9288EED0B835197523370CF9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03C2D5535270237F3D0621662761101F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F111B316F61015638D9834620D94444B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD015C2A359D6D1A0FA6FE25DD90D7C6 /* CFNetwork.framework in Frameworks */,
+				083B591FAB61EFF81DBB9E753C9156AA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F431206658FB92D46D4342224E0EA9A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FBA369F14E7A0A0D8DB681E150C79EB /* CoreFoundation.framework in Frameworks */,
+				FAC0FA3C4AB14D0617E1049CE10EE853 /* CoreGraphics.framework in Frameworks */,
+				45A3A10EA649CF0D14E28AECDCC71763 /* Foundation.framework in Frameworks */,
+				FC3B26B09FF1601F41C9474EFDD6E1D9 /* UIKit.framework in Frameworks */,
+				455E86E20585521857E7E1D62CC708A5 /* XLFacility.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000BC513F255E545091EABCE6336B65E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B31BBABEF45986994D49B59A3276705C /* HJTraceLogger.modulemap */,
+				EB3A4D1C27483C43C767A52106078380 /* HJTraceLogger-dummy.m */,
+				C2180B58858F7DD3249C104512D66D9F /* HJTraceLogger-Info.plist */,
+				B0C44813C1EFD6CF429D45FF3B10163B /* HJTraceLogger-prefix.pch */,
+				4193D7E4580658DAA3CEA887D89C4F1C /* HJTraceLogger-umbrella.h */,
+				EA8554B44C6AEEB03BEA32D28D51EC04 /* HJTraceLogger.debug.xcconfig */,
+				E1E3D0BEED38FBEBC534A13974A251D8 /* HJTraceLogger.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "HJTraceLoggerDemo/Pods/Target Support Files/HJTraceLogger";
+			sourceTree = "<group>";
+		};
+		3384E7B2D8E68C25353C9EA8E37DF221 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D92ECDFAD99713FA70A0AC1FCD617C4 /* Pods-HJTraceLoggerDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		43B0C9BAA99199CE0D3034F3ECE3DB82 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				70D7AD21DDCB23E666CE1CCCC0964ED5 /* XLASLLogger.h */,
+				7B29662B618FE6796BE7A3B719F08813 /* XLASLLogger.m */,
+				0C06A028EFB90BE30E47FAE6847160C6 /* XLCallbackLogger.h */,
+				FA581D604E20BD4599AE7E7682E176BC /* XLCallbackLogger.m */,
+				8C4A9D4F02F68BA63936B6C40F35C399 /* XLDatabaseLogger.h */,
+				F730A579BF4E693F22005EA68BED81BF /* XLDatabaseLogger.m */,
+				E666A2172E62EBB68A011B59386628D4 /* XLFacility.h */,
+				A070E8D946EF37E5C077BDEC540163EE /* XLFacility.m */,
+				C1A6C387DF59AB35CDF15429FB7F257A /* XLFacilityMacros.h */,
+				1A18B17B6BE035129A41DC9C539C7051 /* XLFacilityPrivate.h */,
+				AFE7CC616C01420C41F795142F96AD9C /* XLFileLogger.h */,
+				5FFB76763B99B31CEFA425BEBE73C8DD /* XLFileLogger.m */,
+				FA43AE21DAF3AD6EB6E5A43D5010019A /* XLFunctions.h */,
+				1338185D9B4B82E22A3498CC833C0EE8 /* XLFunctions.m */,
+				3F7CEE229EC6A9BB0FA034B05E2599D8 /* XLLogger.h */,
+				B60805257832E291A2ED0E52106E3909 /* XLLogger.m */,
+				2DFE1BF98FB66862BC93994F3100C6AE /* XLLogRecord.h */,
+				D3F8EE2BDD9A0660E57523DB7E53F487 /* XLLogRecord.m */,
+				724A669B385C8945F6E682DC7EA05B85 /* XLStandardLogger.h */,
+				684E9EDF88314BE832785CC28390BFF3 /* XLStandardLogger.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		500814D37ADDD14D36C4AB6112FCA0F2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C46BDFFEF351713619F157952C55FE8F /* HJHTTPServerLogger.h */,
+				C4ED125EDF0F237D2C23CAFDA8B4BE32 /* HJHTTPServerLogger.m */,
+				8EFBA5CDD49CCBCBCF549410B8579810 /* HJTraceLoggerManager.h */,
+				55A321EAE016B6EEFD05DD2DF69E8024 /* HJTraceLoggerManager.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		60FB8B44C154EE08A1EC5639C30BB621 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				22DC74B2B85D823D84D18B5AF3FE4F5C /* XLHTTPServerLogger.h */,
+				B2692043378C872E20429C142187C254 /* XLHTTPServerLogger.m */,
+				53D5AC8E6C66D67F4F063D5897DA47B0 /* XLTCPClientLogger.h */,
+				074BEA8948B0B2A079C415ED02E0360B /* XLTCPClientLogger.m */,
+				A8606E414B15E3118B3FE9696DB111B1 /* XLTCPServerLogger.h */,
+				45774F570F3330C11E57D431A65F2828 /* XLTCPServerLogger.m */,
+				4645749185C7D3FEA36A8B99DD8D133E /* XLTelnetServerLogger.h */,
+				C1DDD51D977BBEDFF26F0380EFA376A2 /* XLTelnetServerLogger.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		618FAF6061BAA52F31AA1E668B6BF47D /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F297128963A2412FD5D2C174DEEBB922 /* HJTraceLogger */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		69D538175EBAC72B2DA0E5FA2ED41EDA /* GCDNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				875CC654D7937D437BC46F99892306C1 /* GCDNetworking.h */,
+				6E259B67E7DC05B842F0EA4C09A75B5A /* GCDNetworkingLoggingBridgePrivate.h */,
+				FE1368F58B9EAAF49DD19D4F7860E9B0 /* GCDNetworkingPrivate.h */,
+				68F247DAE663255BA4EFC87CFB3D8364 /* GCDTCPClient.h */,
+				A39ED7168F20E2B5479FC252E68646D4 /* GCDTCPClient.m */,
+				DE1F45B797621E284CDBE27AD1A655E9 /* GCDTCPConnection.h */,
+				77B3C9F66F15462BE1451E74B05CD856 /* GCDTCPConnection.m */,
+				7CA5E6B3C50800961EA7FADC7A64B1D2 /* GCDTCPPeer.h */,
+				56A62A7805BE06B8BDC3E68A6C6B5CCA /* GCDTCPPeer.m */,
+				FEACFF09CB30B82A157075147455E0D6 /* GCDTCPServer.h */,
+				DD77864F5D1E793405584B2E29ED36A3 /* GCDTCPServer.m */,
+			);
+			name = GCDNetworking;
+			sourceTree = "<group>";
+		};
+		6D92ECDFAD99713FA70A0AC1FCD617C4 /* Pods-HJTraceLoggerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				0803AA9E6FD6C80416F8EE36B6F47572 /* Pods-HJTraceLoggerDemo.modulemap */,
+				C0F8C0E50C3AD8BC74977632D015F426 /* Pods-HJTraceLoggerDemo-acknowledgements.markdown */,
+				EE0D3F2161814B396864B46429B68C3A /* Pods-HJTraceLoggerDemo-acknowledgements.plist */,
+				A0E98503732B4F8B59C1F085DC4C4B30 /* Pods-HJTraceLoggerDemo-dummy.m */,
+				856CB53ECFA8E153D08A2B98EB809119 /* Pods-HJTraceLoggerDemo-frameworks.sh */,
+				FDC35C9D3D8691E5D54C1D46C33000FD /* Pods-HJTraceLoggerDemo-Info.plist */,
+				652D754C5EF12FEB7AB9E0CB624B1F56 /* Pods-HJTraceLoggerDemo-umbrella.h */,
+				F486DC400EC76866A8E49460532550F0 /* Pods-HJTraceLoggerDemo.debug.xcconfig */,
+				05E380C9717BB03685F926E8EF219C6A /* Pods-HJTraceLoggerDemo.release.xcconfig */,
+			);
+			name = "Pods-HJTraceLoggerDemo";
+			path = "Target Support Files/Pods-HJTraceLoggerDemo";
+			sourceTree = "<group>";
+		};
+		792A9B5956E613C60020F803BC9E016D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F399420FD39ED633777F68776F05778D /* XLFacility.modulemap */,
+				C8F6801CC2914B946D9080A07E4F7FE9 /* XLFacility-dummy.m */,
+				6CE82D5C3B23CF0AABC842FA5C2B6416 /* XLFacility-Info.plist */,
+				8AFE520D3BB562214A8B15C31D71B20D /* XLFacility-prefix.pch */,
+				8FC018350C93D32C1734D9108980DC9A /* XLFacility-umbrella.h */,
+				CC36E9B8B59413A3D0BBAF767211597F /* XLFacility.debug.xcconfig */,
+				8AD5A7E7785E8B67F83CE85D5F1041ED /* XLFacility.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/XLFacility";
+			sourceTree = "<group>";
+		};
+		9BB0674C977980E638DEFC10C778E239 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A470151F8A98EC31F7AFB6BADFF3F250 /* XLFacility */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A470151F8A98EC31F7AFB6BADFF3F250 /* XLFacility */ = {
+			isa = PBXGroup;
+			children = (
+				43B0C9BAA99199CE0D3034F3ECE3DB82 /* Core */,
+				69D538175EBAC72B2DA0E5FA2ED41EDA /* GCDNetworking */,
+				F83CAC416297E2BBB9D9F353C9AEDC08 /* GCDTelnetServer */,
+				60FB8B44C154EE08A1EC5639C30BB621 /* Networking */,
+				792A9B5956E613C60020F803BC9E016D /* Support Files */,
+				FE954A20C1EE2B4476C5F39FBA9A914A /* UserInterface */,
+			);
+			name = XLFacility;
+			path = XLFacility;
+			sourceTree = "<group>";
+		};
+		AAD07FC9AB506B25FE742C377BAB5DB5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24820FDEB0F7ED27ADBF80E3E7FBEEA0 /* HJTraceLogger.framework */,
+				C01A96898605978FD3858FAB12F7FF78 /* Pods_HJTraceLoggerDemo.framework */,
+				D8A1C26E67FED0956B203433D6DC8874 /* XLFacility.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD34210FB3DD19F69ECE13B8414290EB /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				6A215090DC20C169BE8A669DF57DDD1F /* HJTraceLogger.podspec */,
+				33F98DD3B01521A53381861845F9A4A5 /* LICENSE */,
+				6A28C324A87F3C954AAF8B8B6C8ADF0C /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				618FAF6061BAA52F31AA1E668B6BF47D /* Development Pods */,
+				D2B886D09901AEF11EA4FE8CD9FFA467 /* Frameworks */,
+				9BB0674C977980E638DEFC10C778E239 /* Pods */,
+				AAD07FC9AB506B25FE742C377BAB5DB5 /* Products */,
+				3384E7B2D8E68C25353C9EA8E37DF221 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D2B886D09901AEF11EA4FE8CD9FFA467 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F5BCF3EBAB8606D84F82470311E443C /* XLFacility.framework */,
+				EFA880A7B2B1775CF86C31876008AC43 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFA880A7B2B1775CF86C31876008AC43 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				AEBF106FB3665B46BE493F69D9AB03FF /* CFNetwork.framework */,
+				61D0DD0A2312D051083B97199F3D57E2 /* CoreFoundation.framework */,
+				93E8A466946C6E683A906E2AFA3FA636 /* CoreGraphics.framework */,
+				6B3E2CFC018645073A163F528D70531D /* Foundation.framework */,
+				2A490530C2C9957CF884F2D8A37D623F /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F297128963A2412FD5D2C174DEEBB922 /* HJTraceLogger */ = {
+			isa = PBXGroup;
+			children = (
+				0E92D410501435F36CA3EDEE671C359A /* HJTraceLogger.h */,
+				500814D37ADDD14D36C4AB6112FCA0F2 /* Core */,
+				AD34210FB3DD19F69ECE13B8414290EB /* Pod */,
+				000BC513F255E545091EABCE6336B65E /* Support Files */,
+			);
+			name = HJTraceLogger;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		F83CAC416297E2BBB9D9F353C9AEDC08 /* GCDTelnetServer */ = {
+			isa = PBXGroup;
+			children = (
+				4A148C209F7AEFA303174EA2DC380150 /* GCDTelnetConnection.h */,
+				9E0767F22BAAC811AD49EAED9B5D4DBD /* GCDTelnetConnection.m */,
+				0BE70A27C2966D27CC3BB456C676F9F3 /* GCDTelnetLogging.h */,
+				E7247902852FCE5A8B2FC074ADD9FEB9 /* GCDTelnetLoggingBridgePrivate.h */,
+				CB814A86F76AF3F8B0DA9CABD92907B4 /* GCDTelnetPrivate.h */,
+				224A9F92EF16FC273B53E8896D812B21 /* GCDTelnetServer.h */,
+				CEA5D94E7571BC32AFA5F3764839D763 /* GCDTelnetServer.m */,
+				65BD2B2A0913C59DF6EAB2DB57E68102 /* NSMutableString+ANSI.h */,
+				6DD5251E48D83DC4E9C2E859BB4961D2 /* NSMutableString+ANSI.m */,
+			);
+			name = GCDTelnetServer;
+			sourceTree = "<group>";
+		};
+		FE954A20C1EE2B4476C5F39FBA9A914A /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				63522009D8A25A421222DE6EAEC20162 /* XLUIKitOverlayLogger.h */,
+				C8ADD98E20E4683F5BCC0F5D9D33B2FE /* XLUIKitOverlayLogger.m */,
+			);
+			name = UserInterface;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7117487B8F64ECC7DF839289076727EC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4FC9A09A2D95FDDACFC498D93D5E30E /* HJHTTPServerLogger.h in Headers */,
+				E8DF9F9B1B8CB0A391F08A1141D88629 /* HJTraceLogger-umbrella.h in Headers */,
+				24AFF331CC6CD2937859EF07655F4599 /* HJTraceLogger.h in Headers */,
+				C1D6EE29BBDE06F61AFCC469F46A61AE /* HJTraceLoggerManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B034074780A16B5695FAA35D91742FF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB67326B906273D79403075EF59C38FF /* GCDNetworking.h in Headers */,
+				71DA842D765C2953768F420979BE17CC /* GCDNetworkingLoggingBridgePrivate.h in Headers */,
+				E32ADCF77AD5A2A3E137B3CA3CFFB534 /* GCDNetworkingPrivate.h in Headers */,
+				D141E8D8854A4E7D396A5D7CBAD9094A /* GCDTCPClient.h in Headers */,
+				E78F145206EC1C89A720D051AE0CA8D6 /* GCDTCPConnection.h in Headers */,
+				E147AE4300BA83372367834796836EDE /* GCDTCPPeer.h in Headers */,
+				3FA894F2F4C379564036D5BBFC786FCD /* GCDTCPServer.h in Headers */,
+				E36E6684D66C9F3D8D5924664168C3D9 /* GCDTelnetConnection.h in Headers */,
+				547470E9FC36A1F1CEBE3CBFFCCC9220 /* GCDTelnetLogging.h in Headers */,
+				D3CFF7FB0210DDACFAEAFFD9806B7261 /* GCDTelnetLoggingBridgePrivate.h in Headers */,
+				D99F55F643EDE212A73A3161FE72AAF2 /* GCDTelnetPrivate.h in Headers */,
+				BB2DA9C572744CFF865ED4F58736483D /* GCDTelnetServer.h in Headers */,
+				1E7C638C7F012780C75F3B40B23E8B51 /* NSMutableString+ANSI.h in Headers */,
+				51942896AEBB7A08F6657111363D41F9 /* XLASLLogger.h in Headers */,
+				325395593AF0FE71DE8D2BE12E0D369B /* XLCallbackLogger.h in Headers */,
+				2D0894BA0C5D41D81919296636CA499A /* XLDatabaseLogger.h in Headers */,
+				D027CC18C4399CA4D82A3A40A24DB442 /* XLFacility-umbrella.h in Headers */,
+				548DFDAE14D64629FD7F139E61C5ECB4 /* XLFacility.h in Headers */,
+				828D87C3ADCF1D17CC15CDD858B13464 /* XLFacilityMacros.h in Headers */,
+				40AAA3906C2CE418B2358260498C5EFC /* XLFacilityPrivate.h in Headers */,
+				672C4575E7F88AA089ABDC896C3558FC /* XLFileLogger.h in Headers */,
+				A97E48FA7D5E00288BA2A4AF6650F31E /* XLFunctions.h in Headers */,
+				741067DE3487234055EF558C2E19563F /* XLHTTPServerLogger.h in Headers */,
+				5E778AB4D91BE0914233556862D0A569 /* XLLogger.h in Headers */,
+				4A0B614974129378CD3656E9E64B22B7 /* XLLogRecord.h in Headers */,
+				B946537D91EB35DA28E27B811D37020B /* XLStandardLogger.h in Headers */,
+				A1F79B59F6ACE0AF5EE4AB5B5C81DCE7 /* XLTCPClientLogger.h in Headers */,
+				A6046350F048EEE7300D25364753C673 /* XLTCPServerLogger.h in Headers */,
+				BDF289E0BB177E97FFCA9C712709585B /* XLTelnetServerLogger.h in Headers */,
+				262256B449B7B70145C4CC45B06029BD /* XLUIKitOverlayLogger.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FE13CE2412959764104CC08DC88448C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D0716238A51E4D27D4568E451E4CCD9 /* Pods-HJTraceLoggerDemo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		124F86727ACF8A05FE9D7CD4641AD704 /* Pods-HJTraceLoggerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B078F12B1B0B64E8B2ADC4D47265B4E /* Build configuration list for PBXNativeTarget "Pods-HJTraceLoggerDemo" */;
+			buildPhases = (
+				9FE13CE2412959764104CC08DC88448C /* Headers */,
+				D07BB82C49034CE1B3DBA864EFAAB22A /* Sources */,
+				977E76D9288EED0B835197523370CF9D /* Frameworks */,
+				309F729E4B4FCC94E153CB80E3A7AE83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E30B4B53C0950A60C4D773F43D63B17D /* PBXTargetDependency */,
+				B887FC249A1B6D3E636588F3A6A123A8 /* PBXTargetDependency */,
+			);
+			name = "Pods-HJTraceLoggerDemo";
+			productName = "Pods-HJTraceLoggerDemo";
+			productReference = C01A96898605978FD3858FAB12F7FF78 /* Pods_HJTraceLoggerDemo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1AF7B31D8C104CA673DCA6332275EAC7 /* HJTraceLogger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E29CB8414A9E057DC41C60FC80D9DA23 /* Build configuration list for PBXNativeTarget "HJTraceLogger" */;
+			buildPhases = (
+				7117487B8F64ECC7DF839289076727EC /* Headers */,
+				27F76C9BADFED3283F82628FB6910DE9 /* Sources */,
+				F431206658FB92D46D4342224E0EA9A5 /* Frameworks */,
+				3EDC9C76CC46ECDD9B2B393274A01748 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6DEDC3765CE3D545A072112F2C859FE /* PBXTargetDependency */,
+			);
+			name = HJTraceLogger;
+			productName = HJTraceLogger;
+			productReference = 24820FDEB0F7ED27ADBF80E3E7FBEEA0 /* HJTraceLogger.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5D89159F4F731EB4929A6789C9A90980 /* XLFacility */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41D2836A1309E4B07CF6765082419427 /* Build configuration list for PBXNativeTarget "XLFacility" */;
+			buildPhases = (
+				7B034074780A16B5695FAA35D91742FF /* Headers */,
+				719D334981150964F5D12C09CC74AB34 /* Sources */,
+				F111B316F61015638D9834620D94444B /* Frameworks */,
+				DD5D829EC34F7A2FF91D2E5D8F6F6E77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XLFacility;
+			productName = XLFacility;
+			productReference = D8A1C26E67FED0956B203433D6DC8874 /* XLFacility.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = AAD07FC9AB506B25FE742C377BAB5DB5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1AF7B31D8C104CA673DCA6332275EAC7 /* HJTraceLogger */,
+				124F86727ACF8A05FE9D7CD4641AD704 /* Pods-HJTraceLoggerDemo */,
+				5D89159F4F731EB4929A6789C9A90980 /* XLFacility */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		309F729E4B4FCC94E153CB80E3A7AE83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EDC9C76CC46ECDD9B2B393274A01748 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD5D829EC34F7A2FF91D2E5D8F6F6E77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27F76C9BADFED3283F82628FB6910DE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94131920B1D1C3C19D9341AF2EC6B584 /* HJHTTPServerLogger.m in Sources */,
+				E5123B87461DBA55F490C57DA8C38A29 /* HJTraceLogger-dummy.m in Sources */,
+				F7B1ED78491E09C3C673CA9BE5A9FC64 /* HJTraceLoggerManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		719D334981150964F5D12C09CC74AB34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5EC55EE1157E5813B4D35134EF6C793 /* GCDTCPClient.m in Sources */,
+				4A263A08BF589D95F96206DB09836A81 /* GCDTCPConnection.m in Sources */,
+				9B3E71A753282BA7E05161F0E79F5E9F /* GCDTCPPeer.m in Sources */,
+				A38897CDDF449CD81C04BDAAB7BFE8F7 /* GCDTCPServer.m in Sources */,
+				4E600217D910F9558808AD4CB5FAFA74 /* GCDTelnetConnection.m in Sources */,
+				C3A2B884713BD070FCAEDBE1D526FA87 /* GCDTelnetServer.m in Sources */,
+				C4FF10770787BA949D21F2199A706C1F /* NSMutableString+ANSI.m in Sources */,
+				62B48A27F854B1030CBF1ABE09AA34B9 /* XLASLLogger.m in Sources */,
+				457E53ECAEDEF7BF95A7393C00D0D49D /* XLCallbackLogger.m in Sources */,
+				3D93A2FF24A4C3788078776B96B317FA /* XLDatabaseLogger.m in Sources */,
+				1233E1BA8ECB6B22193AC2D0E7F83724 /* XLFacility-dummy.m in Sources */,
+				40C15568356220062DE2D1952C0D5F57 /* XLFacility.m in Sources */,
+				FB83B513CCF3F1BD64B0705A6BE519DA /* XLFileLogger.m in Sources */,
+				4F0A0C9822D64FE5A8497E85DE346E1A /* XLFunctions.m in Sources */,
+				59FCE4EF33BCFA46DAF0E124A36E8D1A /* XLHTTPServerLogger.m in Sources */,
+				3834ED085A6F19027E3A2722C7D7963A /* XLLogger.m in Sources */,
+				1F5A3406C288221BA5734538A6E6666E /* XLLogRecord.m in Sources */,
+				F9C1C803158474E243D56A4433FE0E85 /* XLStandardLogger.m in Sources */,
+				3F0FB6232BAA4BCDACDFEBE9D82E8C66 /* XLTCPClientLogger.m in Sources */,
+				5EBAA2867192E4445141DD3A8412DB7A /* XLTCPServerLogger.m in Sources */,
+				1CC35B6C221740709D0161A3C9295834 /* XLTelnetServerLogger.m in Sources */,
+				128F3BF7DEDB6D4D5B2020FBEFCE8B47 /* XLUIKitOverlayLogger.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D07BB82C49034CE1B3DBA864EFAAB22A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28EC132E8057F8AB32DB63447A87398F /* Pods-HJTraceLoggerDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A6DEDC3765CE3D545A072112F2C859FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XLFacility;
+			target = 5D89159F4F731EB4929A6789C9A90980 /* XLFacility */;
+			targetProxy = 26746C227640D92FEC79856D82423F13 /* PBXContainerItemProxy */;
+		};
+		B887FC249A1B6D3E636588F3A6A123A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XLFacility;
+			target = 5D89159F4F731EB4929A6789C9A90980 /* XLFacility */;
+			targetProxy = 0657798A7A9185258DCFA185F7932A1B /* PBXContainerItemProxy */;
+		};
+		E30B4B53C0950A60C4D773F43D63B17D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HJTraceLogger;
+			target = 1AF7B31D8C104CA673DCA6332275EAC7 /* HJTraceLogger */;
+			targetProxy = 200E353D8FB4C291C83F0B819BAC8C9E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		52A4E3BDC53F6D14970DB0ACAF20DE6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AD5A7E7785E8B67F83CE85D5F1041ED /* XLFacility.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/XLFacility/XLFacility-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XLFacility/XLFacility-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/XLFacility/XLFacility.modulemap";
+				PRODUCT_MODULE_NAME = XLFacility;
+				PRODUCT_NAME = XLFacility;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A98FD3B4B1817D7A42802D341DF5026F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F486DC400EC76866A8E49460532550F0 /* Pods-HJTraceLoggerDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HJTraceLoggerDemo/Pods-HJTraceLoggerDemo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HJTraceLoggerDemo/Pods-HJTraceLoggerDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AFA6BCE8F6581B5C48E9E47B6A08AAB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC36E9B8B59413A3D0BBAF767211597F /* XLFacility.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/XLFacility/XLFacility-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XLFacility/XLFacility-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/XLFacility/XLFacility.modulemap";
+				PRODUCT_MODULE_NAME = XLFacility;
+				PRODUCT_NAME = XLFacility;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B75EC5395C5494A47EAC6353FFDBD6D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA8554B44C6AEEB03BEA32D28D51EC04 /* HJTraceLogger.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HJTraceLogger/HJTraceLogger-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HJTraceLogger/HJTraceLogger-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/HJTraceLogger/HJTraceLogger.modulemap";
+				PRODUCT_MODULE_NAME = HJTraceLogger;
+				PRODUCT_NAME = HJTraceLogger;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BF9F7FFB7F2B819FAF589D0E18FA8378 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05E380C9717BB03685F926E8EF219C6A /* Pods-HJTraceLoggerDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HJTraceLoggerDemo/Pods-HJTraceLoggerDemo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HJTraceLoggerDemo/Pods-HJTraceLoggerDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		F6080815E41F5EFC5BADA991997985C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1E3D0BEED38FBEBC534A13974A251D8 /* HJTraceLogger.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HJTraceLogger/HJTraceLogger-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HJTraceLogger/HJTraceLogger-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/HJTraceLogger/HJTraceLogger.modulemap";
+				PRODUCT_MODULE_NAME = HJTraceLogger;
+				PRODUCT_NAME = HJTraceLogger;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		41D2836A1309E4B07CF6765082419427 /* Build configuration list for PBXNativeTarget "XLFacility" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFA6BCE8F6581B5C48E9E47B6A08AAB0 /* Debug */,
+				52A4E3BDC53F6D14970DB0ACAF20DE6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
+				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B078F12B1B0B64E8B2ADC4D47265B4E /* Build configuration list for PBXNativeTarget "Pods-HJTraceLoggerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A98FD3B4B1817D7A42802D341DF5026F /* Debug */,
+				BF9F7FFB7F2B819FAF589D0E18FA8378 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E29CB8414A9E057DC41C60FC80D9DA23 /* Build configuration list for PBXNativeTarget "HJTraceLogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B75EC5395C5494A47EAC6353FFDBD6D2 /* Debug */,
+				F6080815E41F5EFC5BADA991997985C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

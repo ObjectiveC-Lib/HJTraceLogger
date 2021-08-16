@@ -1,0 +1,40 @@
+PODS:
+  - HJTraceLogger (1.0.0):
+    - HJTraceLogger/Core (= 1.0.0)
+    - XLFacility
+  - HJTraceLogger/Core (1.0.0):
+    - XLFacility
+  - XLFacility (1.5.18):
+    - XLFacility/Core (= 1.5.18)
+    - XLFacility/GCDNetworking (= 1.5.18)
+    - XLFacility/GCDTelnetServer (= 1.5.18)
+    - XLFacility/Networking (= 1.5.18)
+    - XLFacility/UserInterface (= 1.5.18)
+  - XLFacility/Core (1.5.18)
+  - XLFacility/GCDNetworking (1.5.18)
+  - XLFacility/GCDTelnetServer (1.5.18):
+    - XLFacility/GCDNetworking
+  - XLFacility/Networking (1.5.18):
+    - XLFacility/Core
+    - XLFacility/GCDTelnetServer
+  - XLFacility/UserInterface (1.5.18):
+    - XLFacility/Core
+
+DEPENDENCIES:
+  - HJTraceLogger (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - XLFacility
+
+EXTERNAL SOURCES:
+  HJTraceLogger:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HJTraceLogger: 9325a246720f93d9b9aa9f63dcbae496180832a3
+  XLFacility: f24747c4f586372bddae3525d837ef42b0e26339
+
+PODFILE CHECKSUM: 3707a4debefeb806fc049f79e40231efe988aef8
+
+COCOAPODS: 1.10.2

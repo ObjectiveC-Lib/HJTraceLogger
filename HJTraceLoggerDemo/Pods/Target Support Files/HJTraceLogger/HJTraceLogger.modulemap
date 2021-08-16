@@ -1,0 +1,6 @@
+framework module HJTraceLogger {
+  umbrella header "HJTraceLogger-umbrella.h"
+
+  export *
+  module * { export * }
+}
