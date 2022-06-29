@@ -30,3 +30,10 @@ pod 'HJTraceLogger', '~> 1.0.0'
 2, 查看手机网络的ip
 3, 在 PC 浏览器中打开 http://手机ip:8080 浏览日志
 ```
+
+## 配置
+
+```
+1, AppDelegate.m 改为 AppDelegate.mm
+2, Build Settings -> Enable Bitcode = NO
+```

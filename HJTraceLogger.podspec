@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name         = 'HJTraceLogger'
-  s.version      = '1.0.0'
+  s.version      = '2.0.0'
   
-  s.platform     = :ios, '8.0'
+  s.platform     = :ios, '10.0'
   
   s.summary      = 'A real time iOS log trace tool, view iOS log with pc web browser under local area network, which will automatically scroll like xcode.'
   s.homepage     = 'https://github.com/ObjectiveC-Lib/HJTraceLogger'
@@ -11,14 +11,28 @@ Pod::Spec.new do |s|
   s.author       = { 'navy' => 'lzxy169@gmail.com' }
   
   s.requires_arc = true
-#  s.libraries    = 'sqlite3'
-  s.frameworks   = 'UIKit', 'Foundation', 'CoreFoundation', 'CoreGraphics'
+  s.libraries    = 'sqlite3'
   
-  s.source_files = 'HJTraceLogger/HJTraceLogger.h'
+  s.source_files = 'HJTraceLogger/Core/HJTraceLogger.h'
   s.default_subspec = 'Core'
   
-  s.subspec 'Core' do |core|
-    core.source_files = 'HJTraceLogger/**/*.{h,m}'
+  s.subspec 'Public' do |ss|
+    ss.source_files = 'HJTraceLogger/Public/**/*.{h,m,mm,cc}'
+  end
+  
+  s.subspec 'Mars' do |ss|
+    ss.source_files = 'HJTraceLogger/Mars/**/*.{h,m,mm,cc}'
+    ss.vendored_frameworks = 'HJTraceLogger/Mars/**/*.{framework}'
+    ss.frameworks   = 'CoreTelephony', 'SystemConfiguration'
+    ss.dependency 'HJTraceLogger/Public'
+    ss.dependency 'SSZipArchive'
+  end
+  
+  s.subspec 'Core' do |ss|
+    ss.source_files = 'HJTraceLogger/Core/**/*.{h,m,mm,cc}'
+    ss.frameworks   = 'UIKit', 'Foundation', 'CoreFoundation', 'CoreGraphics'
+    ss.dependency 'HJTraceLogger/Public'
+    ss.dependency 'HJTraceLogger/Mars'
   end
   
   s.dependency 'XLFacility'

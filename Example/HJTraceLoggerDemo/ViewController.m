@@ -7,7 +7,7 @@
 
 #import "ViewController.h"
 #import <HJTraceLogger/HJTraceLogger.h>
-
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface ViewController ()
 
@@ -41,9 +41,19 @@
 #pragma mark - Action
 
 - (void)doTest:(id)sender {
-    XLOG_INFO(@"INFO 测试:  您正在使用 iOS 远程日志查看服务！");
-    XLOG_WARNING(@"WARNING 测试:  您正在使用 iOS 远程日志查看服务！");
-    XLOG_ERROR(@"ERROR 测试:  您正在使用 iOS 远程日志查看服务！");
+    TLogFile(@"INFO 测试:  您正在使用 iOS 远程日志查看服务！");
+    TLogFile_WARNING(@"WARNING 测试:  您正在使用 iOS 远程日志查看服务！");
+    TLogFile_ERROR(@"ERROR 测试:  您正在使用 iOS 远程日志查看服务！");
+    
+    [SVProgressHUD show];
+    [HJTraceLoggerManager uploadLog:self
+                         completion:^(NSString * _Nonnull zipPath) {
+        NSLog(@"zipPath = %@", zipPath);
+        [SVProgressHUD dismiss];
+        if (!zipPath) {
+            [SVProgressHUD showErrorWithStatus:@"Zip file fail"];
+        }
+    }];
 }
 
 @end
