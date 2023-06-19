@@ -41,6 +41,8 @@
 #pragma mark - Action
 
 - (void)doTest:(id)sender {
+    TLog(@"INFO 测试:  您正在使用 iOS 远程日志查看服务！");
+    
     TLogFile(@"INFO 测试:  您正在使用 iOS 远程日志查看服务！");
     TLogFile_WARNING(@"WARNING 测试:  您正在使用 iOS 远程日志查看服务！");
     TLogFile_ERROR(@"ERROR 测试:  您正在使用 iOS 远程日志查看服务！");

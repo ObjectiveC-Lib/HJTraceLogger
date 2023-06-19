@@ -117,8 +117,8 @@ const NSString *HJLoggerFormatString_Server = @"[%d] %m";
 #if DEBUG
     [XLSharedFacility addLogger:[HJTraceLoggerManager sharedInstance].httpServerLogger];
     TLog(@"[HJTraceLogger] 请在您的 PC 浏览器中打开 http://%@:%lu 浏览日志。",
-              GCDTCPServerGetPrimaryIPAddress(false),
-              (unsigned long)[HJTraceLoggerManager sharedInstance].httpServerLogger.TCPServer.port);
+         GCDTCPServerGetPrimaryIPAddress(false),
+         (unsigned long)[HJTraceLoggerManager sharedInstance].httpServerLogger.TCPServer.port);
 #endif
 }
 
@@ -238,6 +238,7 @@ const NSString *HJLoggerFormatString_Server = @"[%d] %m";
            withTag:(NSString *)tag
              level:(TLLogLevel)level
            logFile:(BOOL)logFile
+        logConsole:(BOOL)logConsole
           fileName:(NSString *)fileName
           funcName:(NSString *)funcName
         lineNumber:(NSInteger)lineNumber {
@@ -245,6 +246,7 @@ const NSString *HJLoggerFormatString_Server = @"[%d] %m";
              withTag:tag
                level:level
              logFile:logFile
+          logConsole:logConsole
             fileName:fileName
             funcName:funcName
           lineNumber:lineNumber
@@ -255,11 +257,14 @@ const NSString *HJLoggerFormatString_Server = @"[%d] %m";
            withTag:(NSString *)tag
              level:(TLLogLevel)level
            logFile:(BOOL)logFile
+        logConsole:(BOOL)logConsole
           fileName:(NSString *)fileName
           funcName:(NSString *)funcName
         lineNumber:(NSInteger)lineNumber
           metadata:(NSDictionary<NSString*, id>*)metadata {
-    [XLSharedFacility logMessage:message withTag:tag level:level metadata:metadata];
+    if (logConsole) {
+        [XLSharedFacility logMessage:message withTag:tag level:level metadata:metadata];
+    }
     
     if (logFile) {
         [HJMarsLogger logWrite:@""
@@ -274,6 +279,7 @@ const NSString *HJLoggerFormatString_Server = @"[%d] %m";
 + (void)logMessageWithTag:(NSString *)tag
                     level:(TLLogLevel)level
                   logFile:(BOOL)logFile
+               logConsole:(BOOL)logConsole
                  fileName:(NSString *)fileName
                  funcName:(NSString *)funcName
                lineNumber:(NSInteger)lineNumber
@@ -281,6 +287,7 @@ const NSString *HJLoggerFormatString_Server = @"[%d] %m";
     [self logMessageWithTag:tag
                       level:level
                     logFile:logFile
+                 logConsole:logConsole
                    fileName:fileName
                    funcName:funcName
                  lineNumber:lineNumber
@@ -291,12 +298,15 @@ const NSString *HJLoggerFormatString_Server = @"[%d] %m";
 + (void)logMessageWithTag:(NSString *)tag
                     level:(TLLogLevel)level
                   logFile:(BOOL)logFile
+               logConsole:(BOOL)logConsole
                  metadata:(NSDictionary<NSString*, id>*)metadata
                  fileName:(NSString *)fileName
                  funcName:(NSString *)funcName
                lineNumber:(NSInteger)lineNumber
                    format:(NSString *)format, ... {
-    [XLSharedFacility logMessageWithTag:tag level:level metadata:metadata format:format];
+    if (logConsole) {
+        [XLSharedFacility logMessageWithTag:tag level:level metadata:metadata format:format];
+    }
     
     if (logFile) {
         va_list arguments;
@@ -315,12 +325,14 @@ const NSString *HJLoggerFormatString_Server = @"[%d] %m";
 + (void)logException:(NSException *)exception
              withTag:(NSString *)tag
              logFile:(BOOL)logFile
+          logConsole:(BOOL)logConsole
             fileName:(NSString *)fileName
             funcName:(NSString *)funcName
           lineNumber:(NSInteger)lineNumber {
     [self logException:exception
                withTag:tag
                logFile:logFile
+            logConsole:logConsole
               fileName:fileName
               funcName:funcName
             lineNumber:lineNumber
@@ -330,11 +342,14 @@ const NSString *HJLoggerFormatString_Server = @"[%d] %m";
 + (void)logException:(NSException *)exception
              withTag:(NSString *)tag
              logFile:(BOOL)logFile
+          logConsole:(BOOL)logConsole
             fileName:(NSString *)fileName
             funcName:(NSString *)funcName
           lineNumber:(NSInteger)lineNumber
             metadata:(NSDictionary<NSString*, id>*)metadata {
-    [XLSharedFacility logException:exception withTag:tag metadata:metadata];
+    if (logConsole) {
+        [XLSharedFacility logException:exception withTag:tag metadata:metadata];
+    }
     
     if (logFile) {
         NSString *message = [NSString stringWithFormat:@"%@ %@", exception.name, exception.reason];

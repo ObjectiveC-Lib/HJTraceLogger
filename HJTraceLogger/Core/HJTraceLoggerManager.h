@@ -34,6 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
            withTag:(nullable NSString*)tag
              level:(TLLogLevel)level
            logFile:(BOOL)logFile
+        logConsole:(BOOL)logConsole
           fileName:(NSString *)fileName
           funcName:(NSString *)funcName
         lineNumber:(NSInteger)lineNumber;
@@ -42,6 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
            withTag:(nullable NSString*)tag
              level:(TLLogLevel)level
            logFile:(BOOL)logFile
+        logConsole:(BOOL)logConsole
           fileName:(NSString *)fileName
           funcName:(NSString *)funcName
         lineNumber:(NSInteger)lineNumber
@@ -50,23 +52,26 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)logMessageWithTag:(nullable NSString*)tag
                     level:(TLLogLevel)level
                   logFile:(BOOL)logFile
+               logConsole:(BOOL)logConsole
                  fileName:(NSString *)fileName
                  funcName:(NSString *)funcName
                lineNumber:(NSInteger)lineNumber
-                   format:(NSString*)format, ... NS_FORMAT_FUNCTION(7, 8);
+                   format:(NSString*)format, ... NS_FORMAT_FUNCTION(8, 9);
 
 + (void)logMessageWithTag:(nullable NSString*)tag
                     level:(TLLogLevel)level
                   logFile:(BOOL)logFile
+               logConsole:(BOOL)logConsole
                  fileName:(NSString *)fileName
                  funcName:(NSString *)funcName
                lineNumber:(NSInteger)lineNumber
                  metadata:(nullable NSDictionary<NSString*, id>*)metadata
-                   format:(NSString*)format, ... NS_FORMAT_FUNCTION(8, 9);
+                   format:(NSString*)format, ... NS_FORMAT_FUNCTION(9, 10);
 
 + (void)logException:(NSException*)exception
              withTag:(nullable NSString*)tag
              logFile:(BOOL)logFile
+          logConsole:(BOOL)logConsole
             fileName:(NSString *)fileName
             funcName:(NSString *)funcName
           lineNumber:(NSInteger)lineNumber;
@@ -74,6 +79,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)logException:(NSException*)exception
              withTag:(nullable NSString*)tag
              logFile:(BOOL)logFile
+          logConsole:(BOOL)logConsole
             fileName:(NSString *)fileName
             funcName:(NSString *)funcName
           lineNumber:(NSInteger)lineNumber

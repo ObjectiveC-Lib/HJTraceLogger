@@ -25,7 +25,10 @@
 #define TLLOG_TO_FILE (YES)
 #define TLLOG_NO_TO_FILE (NO)
 
-#define TLLOG_INTERNAL(tag, logLevel, toFile, format, ...) \
+#define TLLOG_TO_Console (YES)
+#define TLLOG_NO_TO_Console (NO)
+
+#define TLLOG_INTERNAL(tag, logLevel, toFile, toConsole, format, ...) \
 do { \
     NSString *message = [NSString stringWithFormat:@"%@", [NSString stringWithFormat:format, ##__VA_ARGS__, nil]]; \
     if ([HJTraceLoggerManager shouldLog:logLevel]) { \
@@ -33,18 +36,20 @@ do { \
                                  withTag:tag \
                                    level:logLevel \
                                  logFile:toFile \
+                              logConsole:toConsole \
                                 fileName:[NSString stringWithFormat:@"%s", __FILENAME__]  \
                                 funcName:[NSString stringWithFormat:@"%s", __FUNCTION__]  \
                               lineNumber:__LINE__]; \
     } \
 } while (0)
 
-#define TLLOG_INTERNAL_EXCEPTION(tag, toFile, __EXCEPTION__) \
+#define TLLOG_INTERNAL_EXCEPTION(tag, toFile, toConsole, __EXCEPTION__) \
 do { \
     if ([HJTraceLoggerManager shouldLog:TLLogLevel_Exception]) { \
         [HJTraceLoggerManager logException:__EXCEPTION__ \
                                    withTag:tag \
                                    logFile:toFile \
+                                logConsole:toConsole \
                                   fileName:[NSString stringWithFormat:@"%s", __FILENAME__] \
                                   funcName:[NSString stringWithFormat:@"%s", __FUNCTION__] \
                                 lineNumber:__LINE__]; \
@@ -52,30 +57,30 @@ do { \
 } while (0)
 
 #if DEBUG
-#define TLLOG_DEBUG(tag, toFile, format, ...) TLLOG_INTERNAL(tag, TLLogLevel_Debug, toFile, format, ##__VA_ARGS__)
+#define TLLOG_DEBUG(tag, toFile, format, ...) TLLOG_INTERNAL(tag, TLLogLevel_Debug, toFile, toConsole, format, ##__VA_ARGS__)
 #else
 #define TLLOG_DEBUG(...)
 #endif
-#define TLLOG_VERBOSE(tag, toFile, format, ...) TLLOG_INTERNAL(tag, TLLogLevel_Verbose, toFile, format, ##__VA_ARGS__)
-#define TLLOG_INFO(tag, toFile, format, ...) TLLOG_INTERNAL(tag, TLLogLevel_Info, toFile, format, ##__VA_ARGS__)
-#define TLLOG_WARNING(tag, toFile, format, ...) TLLOG_INTERNAL(tag, TLLogLevel_Warning, toFile, format, ##__VA_ARGS__)
-#define TLLOG_ERROR(tag, toFile, format, ...) TLLOG_INTERNAL(tag, TLLogLevel_Error, toFile, format, ##__VA_ARGS__)
-#define TLLOG_EXCEPTION(tag, toFile, __EXCEPTION__) TLLOG_INTERNAL_EXCEPTION(tag, toFile, __EXCEPTION__)
-#define TLLOG_ABORT(tag, toFile, format, ...) TLLOG_INTERNAL(tag, TLLogLevel_Abort, toFile, format, ##__VA_ARGS__)
+#define TLLOG_VERBOSE(tag, toFile, toConsole, format, ...) TLLOG_INTERNAL(tag, TLLogLevel_Verbose, toFile, toConsole, format, ##__VA_ARGS__)
+#define TLLOG_INFO(tag, toFile, toConsole, format, ...) TLLOG_INTERNAL(tag, TLLogLevel_Info, toFile, toConsole, format, ##__VA_ARGS__)
+#define TLLOG_WARNING(tag, toFile, toConsole, format, ...) TLLOG_INTERNAL(tag, TLLogLevel_Warning, toFile, toConsole, format, ##__VA_ARGS__)
+#define TLLOG_ERROR(tag, toFile, toConsole, format, ...) TLLOG_INTERNAL(tag, TLLogLevel_Error, toFile, toConsole, format, ##__VA_ARGS__)
+#define TLLOG_EXCEPTION(tag, toFile, toConsole, __EXCEPTION__) TLLOG_INTERNAL_EXCEPTION(tag, toFile, toConsole, __EXCEPTION__)
+#define TLLOG_ABORT(tag, toFile, toConsole, format, ...) TLLOG_INTERNAL(tag, TLLogLevel_Abort, toFile, toConsole, format, ##__VA_ARGS__)
 
-#define TLog_DEBUG(format, ...) TLLOG_DEBUG(TLLOG_TAG, TLLOG_NO_TO_FILE, (@"\n⚡️⚡️⚡️⚡️⚡️⚡️\n" format "\n⚡️⚡️⚡️⚡️⚡️⚡️\n"), ##__VA_ARGS__)
-#define TLog(format, ...) TLLOG_INFO(TLLOG_TAG, TLLOG_NO_TO_FILE, (@"\n🔻🔻🔻🔻🔻🔻\n" format "\n🔺🔺🔺🔺🔺🔺\n"), ##__VA_ARGS__)
-#define TLog_WARNING(format, ...) TLLOG_WARNING(TLLOG_TAG, TLLOG_NO_TO_FILE, (@"\n⚠️⚠️⚠️⚠️⚠️⚠️\n" format "\n⚠️⚠️⚠️⚠️⚠️⚠️\n"), ##__VA_ARGS__)
-#define TLog_ERROR(format, ...) TLLOG_ERROR(TLLOG_TAG, TLLOG_NO_TO_FILE, (@"\n💔💔💔💔💔💔\n" format "\n💔💔💔💔💔💔\n"), ##__VA_ARGS__)
-#define TLog_EXCEPTION(__EXCEPTION__) TLLOG_EXCEPTION(TLLOG_TAG, TLLOG_NO_TO_FILE, __EXCEPTION__)
-#define TLog_ABORT(format, ...) TLLOG_ABORT(TLLOG_TAG, TLLOG_NO_TO_FILE, (@"\n💔💔💔💔💔💔\n" format "\n💔💔💔💔💔💔\n"), ##__VA_ARGS__)
+#define TLog_DEBUG(format, ...) TLLOG_DEBUG(TLLOG_TAG, TLLOG_NO_TO_FILE, TLLOG_TO_Console, (@"\n⚡️⚡️⚡️⚡️⚡️⚡️\n" format "\n⚡️⚡️⚡️⚡️⚡️⚡️\n"), ##__VA_ARGS__)
+#define TLog(format, ...) TLLOG_INFO(TLLOG_TAG, TLLOG_NO_TO_FILE, TLLOG_TO_Console, (@"\n🔻🔻🔻🔻🔻🔻\n" format "\n🔺🔺🔺🔺🔺🔺\n"), ##__VA_ARGS__)
+#define TLog_WARNING(format, ...) TLLOG_WARNING(TLLOG_TAG, TLLOG_NO_TO_FILE, TLLOG_TO_Console, (@"\n⚠️⚠️⚠️⚠️⚠️⚠️\n" format "\n⚠️⚠️⚠️⚠️⚠️⚠️\n"), ##__VA_ARGS__)
+#define TLog_ERROR(format, ...) TLLOG_ERROR(TLLOG_TAG, TLLOG_NO_TO_FILE, TLLOG_TO_Console, (@"\n💔💔💔💔💔💔\n" format "\n💔💔💔💔💔💔\n"), ##__VA_ARGS__)
+#define TLog_EXCEPTION(__EXCEPTION__) TLLOG_EXCEPTION(TLLOG_TAG, TLLOG_NO_TO_FILE, TLLOG_TO_Console, __EXCEPTION__)
+#define TLog_ABORT(format, ...) TLLOG_ABORT(TLLOG_TAG, TLLOG_NO_TO_FILE, TLLOG_TO_Console, (@"\n💔💔💔💔💔💔\n" format "\n💔💔💔💔💔💔\n"), ##__VA_ARGS__)
 
-#define TLogFile_DEBUG(format, ...) TLLOG_DEBUG(TLLOG_TAG, TLLOG_TO_FILE, (@"\n⚡️⚡️⚡️⚡️⚡️⚡️\n" format "\n⚡️⚡️⚡️⚡️⚡️⚡️\n"), ##__VA_ARGS__)
-#define TLogFile(format, ...) TLLOG_INFO(TLLOG_TAG, TLLOG_TO_FILE, (@"\n🔻🔻🔻🔻🔻🔻\n" format "\n🔺🔺🔺🔺🔺🔺\n"), ##__VA_ARGS__)
-#define TLogFile_WARNING(format, ...) TLLOG_WARNING(TLLOG_TAG, TLLOG_TO_FILE, (@"\n⚠️⚠️⚠️⚠️⚠️⚠️\n" format "\n⚠️⚠️⚠️⚠️⚠️⚠️\n"), ##__VA_ARGS__)
-#define TLogFile_ERROR(format, ...) TLLOG_ERROR(TLLOG_TAG, TLLOG_TO_FILE, (@"\n💔💔💔💔💔💔\n" format "\n💔💔💔💔💔💔\n"), ##__VA_ARGS__)
-#define TLogFile_EXCEPTION(__EXCEPTION__) TLLOG_EXCEPTION(TLLOG_TAG, TLLOG_TO_FILE, __EXCEPTION__)
-#define TLogFile_ABORT(format, ...) TLLOG_ABORT(TLLOG_TAG, TLLOG_TO_FILE, (@"\n💔💔💔💔💔💔\n" format "\n💔💔💔💔💔💔\n"), ##__VA_ARGS__)
+#define TLogFile_DEBUG(format, ...) TLLOG_DEBUG(TLLOG_TAG, TLLOG_TO_FILE, TLLOG_NO_TO_Console, (@"\n⚡️⚡️⚡️⚡️⚡️⚡️\n" format "\n⚡️⚡️⚡️⚡️⚡️⚡️\n"), ##__VA_ARGS__)
+#define TLogFile(format, ...) TLLOG_INFO(TLLOG_TAG, TLLOG_TO_FILE, TLLOG_NO_TO_Console, (@"\n🔻🔻🔻🔻🔻🔻\n" format "\n🔺🔺🔺🔺🔺🔺\n"), ##__VA_ARGS__)
+#define TLogFile_WARNING(format, ...) TLLOG_WARNING(TLLOG_TAG, TLLOG_TO_FILE, TLLOG_NO_TO_Console, (@"\n⚠️⚠️⚠️⚠️⚠️⚠️\n" format "\n⚠️⚠️⚠️⚠️⚠️⚠️\n"), ##__VA_ARGS__)
+#define TLogFile_ERROR(format, ...) TLLOG_ERROR(TLLOG_TAG, TLLOG_TO_FILE, TLLOG_NO_TO_Console, (@"\n💔💔💔💔💔💔\n" format "\n💔💔💔💔💔💔\n"), ##__VA_ARGS__)
+#define TLogFile_EXCEPTION(__EXCEPTION__) TLLOG_EXCEPTION(TLLOG_TAG, TLLOG_TO_FILE, TLLOG_NO_TO_Console, __EXCEPTION__)
+#define TLogFile_ABORT(format, ...) TLLOG_ABORT(TLLOG_TAG, TLLOG_TO_FILE, TLLOG_NO_TO_Console, (@"\n💔💔💔💔💔💔\n" format "\n💔💔💔💔💔💔\n"), ##__VA_ARGS__)
 
 /**
  *  These other macros let you easily check conditions inside your code and

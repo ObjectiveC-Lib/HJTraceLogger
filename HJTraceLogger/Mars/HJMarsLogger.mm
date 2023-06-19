@@ -38,11 +38,7 @@
     config.nameprefix_ = [logName UTF8String];
     config.cachedir_ = "";
     config.cache_days_ = 7;
-#if DEBUG
-    config.mode_ = mars::xlog::kAppenderSync;
-#else
     config.mode_ = mars::xlog::kAppenderAsync;
-#endif
     config.compress_mode_ = mars::xlog::kZlib;
     config.compress_level_ = 6;
     mars::xlog::appender_open(config);

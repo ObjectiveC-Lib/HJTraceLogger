@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name         = 'HJTraceLogger'
-  s.version      = '2.0.0'
+  s.version      = '2.0.1'
   
-  s.platform     = :ios, '10.0'
+  s.ios.deployment_target = '10.0'
   
   s.summary      = 'A real time iOS log trace tool, view iOS log with pc web browser under local area network, which will automatically scroll like xcode.'
   s.homepage     = 'https://github.com/ObjectiveC-Lib/HJTraceLogger'

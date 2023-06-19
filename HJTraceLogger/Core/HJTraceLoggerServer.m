@@ -42,16 +42,16 @@
 }
 
 - (UIImage *)hj_tlImageByRoundCornerRadius:(CGFloat)radius
-                             borderWidth:(CGFloat)borderWidth
-                             borderColor:(UIColor *)borderColor {
+                               borderWidth:(CGFloat)borderWidth
+                               borderColor:(UIColor *)borderColor {
     return [self hj_tlImageByRoundCornerRadius:radius corners:UIRectCornerAllCorners borderWidth:borderWidth borderColor:borderColor borderLineJoin:kCGLineJoinMiter];
 }
 
 - (UIImage *)hj_tlImageByRoundCornerRadius:(CGFloat)radius
-                                 corners:(UIRectCorner)corners
-                             borderWidth:(CGFloat)borderWidth
-                             borderColor:(UIColor *)borderColor
-                          borderLineJoin:(CGLineJoin)borderLineJoin {
+                                   corners:(UIRectCorner)corners
+                               borderWidth:(CGFloat)borderWidth
+                               borderColor:(UIColor *)borderColor
+                            borderLineJoin:(CGLineJoin)borderLineJoin {
     
     if (corners != UIRectCornerAllCorners){
         UIRectCorner tmp = 0;
