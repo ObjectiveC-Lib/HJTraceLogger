@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'HJTraceLogger'
-  s.version      = '2.0.1'
+  s.version      = '2.0.2'
   
   s.ios.deployment_target = '10.0'
   
@@ -11,7 +11,10 @@ Pod::Spec.new do |s|
   s.author       = { 'navy' => 'lzxy169@gmail.com' }
   
   s.requires_arc = true
-  s.libraries    = 'sqlite3'
+  s.libraries    = 'sqlite3', 'z', "c++"
+  s.pod_target_xcconfig = {
+    'OTHER_LDFLAGS' => '$(inherited) -lObjC -lc++',
+  }
   
   s.source_files = 'HJTraceLogger/Core/HJTraceLogger.h'
   s.default_subspec = 'Core'
@@ -36,6 +39,4 @@ Pod::Spec.new do |s|
   end
   
   s.dependency 'XLFacility'
-  
-  s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
 end

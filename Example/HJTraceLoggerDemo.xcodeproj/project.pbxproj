@@ -3,17 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37E12481796AEED822D2C5C1 /* Pods_HJTraceLoggerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894075AF3B978F0063041436 /* Pods_HJTraceLoggerDemo.framework */; };
 		5585BCC5286C50F400BB4B8F /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5585BCC4286C50F400BB4B8F /* AppDelegate.mm */; };
-		55D0D95C26CA3F1B0067CC6B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D0D95B26CA3F1B0067CC6B /* ViewController.m */; };
+		55D0D95C26CA3F1B0067CC6B /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55D0D95B26CA3F1B0067CC6B /* ViewController.mm */; };
 		55D0D95F26CA3F1B0067CC6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D0D95D26CA3F1B0067CC6B /* Main.storyboard */; };
 		55D0D96126CA3F1C0067CC6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55D0D96026CA3F1C0067CC6B /* Assets.xcassets */; };
 		55D0D96426CA3F1C0067CC6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D0D96226CA3F1C0067CC6B /* LaunchScreen.storyboard */; };
 		55D0D96726CA3F1C0067CC6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D0D96626CA3F1C0067CC6B /* main.m */; };
-		8E8D19CC688FE8A31E796155 /* libPods-HJTraceLoggerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E8B054D6CF66684F947ABB /* libPods-HJTraceLoggerDemo.a */; };
+		55E81A6D2AE8FD8E00A2FEB5 /* HJTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E81A6C2AE8FD8E00A2FEB5 /* HJTrace.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +23,15 @@
 		55D0D95126CA3F1B0067CC6B /* HJTraceLoggerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HJTraceLoggerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D0D95426CA3F1B0067CC6B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		55D0D95A26CA3F1B0067CC6B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		55D0D95B26CA3F1B0067CC6B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		55D0D95B26CA3F1B0067CC6B /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		55D0D95E26CA3F1B0067CC6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55D0D96026CA3F1C0067CC6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55D0D96326CA3F1C0067CC6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55D0D96526CA3F1C0067CC6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55D0D96626CA3F1C0067CC6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		62E8B054D6CF66684F947ABB /* libPods-HJTraceLoggerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HJTraceLoggerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55E81A6B2AE8FD8E00A2FEB5 /* HJTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTrace.h; sourceTree = "<group>"; };
+		55E81A6C2AE8FD8E00A2FEB5 /* HJTrace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTrace.m; sourceTree = "<group>"; };
+		894075AF3B978F0063041436 /* Pods_HJTraceLoggerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HJTraceLoggerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5475BBAA38AF3D0CDFA86F /* Pods-HJTraceLoggerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HJTraceLoggerDemo.debug.xcconfig"; path = "Target Support Files/Pods-HJTraceLoggerDemo/Pods-HJTraceLoggerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -37,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E8D19CC688FE8A31E796155 /* libPods-HJTraceLoggerDemo.a in Frameworks */,
+				37E12481796AEED822D2C5C1 /* Pods_HJTraceLoggerDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +80,9 @@
 				55D0D95426CA3F1B0067CC6B /* AppDelegate.h */,
 				5585BCC4286C50F400BB4B8F /* AppDelegate.mm */,
 				55D0D95A26CA3F1B0067CC6B /* ViewController.h */,
-				55D0D95B26CA3F1B0067CC6B /* ViewController.m */,
+				55D0D95B26CA3F1B0067CC6B /* ViewController.mm */,
+				55E81A6B2AE8FD8E00A2FEB5 /* HJTrace.h */,
+				55E81A6C2AE8FD8E00A2FEB5 /* HJTrace.m */,
 				55D0D96026CA3F1C0067CC6B /* Assets.xcassets */,
 				55D0D96526CA3F1C0067CC6B /* Info.plist */,
 				55D0D96226CA3F1C0067CC6B /* LaunchScreen.storyboard */,
@@ -90,7 +95,7 @@
 		8A5D08A51CEF033DA31E3E7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				62E8B054D6CF66684F947ABB /* libPods-HJTraceLoggerDemo.a */,
+				894075AF3B978F0063041436 /* Pods_HJTraceLoggerDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -106,7 +111,7 @@
 				55D0D94D26CA3F1B0067CC6B /* Sources */,
 				55D0D94E26CA3F1B0067CC6B /* Frameworks */,
 				55D0D94F26CA3F1B0067CC6B /* Resources */,
-				316F9E95657D15C06E8EEE40 /* [CP] Copy Pods Resources */,
+				B88552C011F99095B1DD818F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -162,23 +167,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		316F9E95657D15C06E8EEE40 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HJTraceLoggerDemo/Pods-HJTraceLoggerDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HJTraceLoggerDemo/Pods-HJTraceLoggerDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HJTraceLoggerDemo/Pods-HJTraceLoggerDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		57BBF50BCAC73A8D8B88D4DC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -201,6 +189,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B88552C011F99095B1DD818F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HJTraceLoggerDemo/Pods-HJTraceLoggerDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HJTraceLoggerDemo/Pods-HJTraceLoggerDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HJTraceLoggerDemo/Pods-HJTraceLoggerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -208,9 +213,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55D0D95C26CA3F1B0067CC6B /* ViewController.m in Sources */,
+				55D0D95C26CA3F1B0067CC6B /* ViewController.mm in Sources */,
 				5585BCC5286C50F400BB4B8F /* AppDelegate.mm in Sources */,
 				55D0D96726CA3F1C0067CC6B /* main.m in Sources */,
+				55E81A6D2AE8FD8E00A2FEB5 /* HJTrace.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LJS52UBL9T;
 				ENABLE_BITCODE = NO;
@@ -363,6 +370,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = navy.HJTraceLoggerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -375,6 +383,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LJS52UBL9T;
 				ENABLE_BITCODE = NO;
@@ -384,6 +393,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = navy.HJTraceLoggerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

@@ -57,7 +57,7 @@ do { \
 } while (0)
 
 #if DEBUG
-#define TLLOG_DEBUG(tag, toFile, format, ...) TLLOG_INTERNAL(tag, TLLogLevel_Debug, toFile, toConsole, format, ##__VA_ARGS__)
+#define TLLOG_DEBUG(tag, toFile, toConsole, format, ...) TLLOG_INTERNAL(tag, TLLogLevel_Debug, toFile, toConsole, format, ##__VA_ARGS__)
 #else
 #define TLLOG_DEBUG(...)
 #endif

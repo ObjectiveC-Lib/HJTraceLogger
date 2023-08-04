@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HJTraceLoggerPublic.h"
+#import <UIKit/UIKit.h>
 #import <XLFacility/XLFacilityMacros.h>
+#import "HJTraceLoggerPublic.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HJTraceLoggerManager : NSObject
-
 // "application:didFinishLaunchingWithOptions:"
 + (void)setupLog:(nullable NSString *)logPath pubKey:(nullable NSString *)pubKey;
 

@@ -18,37 +18,38 @@
 #import <SSZipArchive/SSZipArchive.h>
 
 static NSString *_logPath = nil;
-const NSString *HJLoggerFormatString_NSLog = @"%d %P[%p:%r][%l][%g] %m";
-const NSString *HJLoggerFormatString_Server = @"[%d] %m";
+static NSString *HJLoggerFormatString_NSLog = @"%d %P[%p:%r][%l][%g] %m";
+static NSString *HJLoggerFormatString_Server = @"[%d] %m";
 
 @interface HJTraceLoggerManager ()
 @property (nonatomic, strong) HJTraceLoggerServer *httpServerLogger;
+@property (nonatomic, assign) BOOL logEnabled;
 @end
 
 @implementation HJTraceLoggerManager
 
-+ (nonnull instancetype)sharedInstance {
++ (instancetype)sharedInstance {
     static dispatch_once_t once;
     static id instance;
-    if ([NSThread isMainThread]) {
-        dispatch_once(&once, ^{
-            instance = [[self alloc] init];
-        });
-    } else {
-        dispatch_sync(dispatch_get_main_queue(), ^{
-            dispatch_once(&once, ^{
-                instance = [[self alloc] init];
-            });
-        });
-    }
+    dispatch_once(&once, ^{
+        instance = [[self alloc] init];
+    });
     return instance;
 }
 
 - (instancetype)init {
     if (self = [super init]) {
         _logPath = [self.class logPath];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(appWillTerminated)
+                                                     name:UIApplicationWillTerminateNotification
+                                                   object:nil];
     }
     return self;
+}
+
+- (void)appWillTerminated {
+    [HJTraceLoggerManager closeLog];
 }
 
 + (void)setupLog:(NSString *)logPath pubKey:(NSString *)pubKey {
@@ -76,7 +77,14 @@ const NSString *HJLoggerFormatString_Server = @"[%d] %m";
     [[HJTraceLoggerManager sharedInstance] logZipPath:completion];
 }
 
++ (BOOL)logEnabled {
+    return [[HJTraceLoggerManager sharedInstance] logEnabled];
+}
+
 - (void)setupLog:(NSString *)logPath pubKey:(NSString *)pubKey {
+    if (_logEnabled) return;
+    _logEnabled = YES;
+    
     if (logPath && logPath.length > 0) {
         _logPath = logPath;
     }
@@ -85,9 +93,9 @@ const NSString *HJLoggerFormatString_Server = @"[%d] %m";
     [[XLStandardLogger sharedOutputLogger] setFormat:HJLoggerFormatString_NSLog];
     [[XLStandardLogger sharedErrorLogger] setFormat:HJLoggerFormatString_NSLog];
 #if DEBUG
-    XLSharedFacility.minLogLevel = TLLogLevel_Info;
+    XLSharedFacility.minLogLevel = kXLLogLevel_Info;
 #else
-    XLSharedFacility.minLogLevel = TLLogLevel_Info;
+    XLSharedFacility.minLogLevel = kXLLogLevel_Info;
 #endif
     //    [XLSharedFacility addLogger:[XLUIKitOverlayLogger sharedLogger]];
     //    [XLSharedFacility addLogger:[XLCallbackLogger loggerWithCallback:^(XLCallbackLogger *logger,
@@ -109,7 +117,12 @@ const NSString *HJLoggerFormatString_Server = @"[%d] %m";
 }
 
 - (void)closeLog {
+    if (!_logEnabled) return;
+    _logEnabled = NO;
+    
     [[HJTraceLoggerManager sharedInstance] stopServer];
+    
+    [HJTraceLoggerManager flushLog];
     [HJMarsLogger closeLog];
 }
 
@@ -167,6 +180,8 @@ const NSString *HJLoggerFormatString_Server = @"[%d] %m";
 }
 
 - (void)logZipPath:(void (^)(NSString *zipPath))completion {
+    [HJTraceLoggerManager flushLog];
+    
     NSDateFormatter *formatter = [NSDateFormatter new];
     formatter.dateFormat = @"YYYY_MM-dd_HH-mm";
     NSString *logName = [NSString stringWithFormat:@"tl_xlog_%@.zip", [formatter stringFromDate:NSDate.date]];
@@ -262,8 +277,10 @@ const NSString *HJLoggerFormatString_Server = @"[%d] %m";
           funcName:(NSString *)funcName
         lineNumber:(NSInteger)lineNumber
           metadata:(NSDictionary<NSString*, id>*)metadata {
+    if (![self logEnabled]) return;
+    
     if (logConsole) {
-        [XLSharedFacility logMessage:message withTag:tag level:level metadata:metadata];
+        [XLSharedFacility logMessage:message withTag:tag level:(XLLogLevel)level metadata:metadata];
     }
     
     if (logFile) {
@@ -304,8 +321,10 @@ const NSString *HJLoggerFormatString_Server = @"[%d] %m";
                  funcName:(NSString *)funcName
                lineNumber:(NSInteger)lineNumber
                    format:(NSString *)format, ... {
+    if (![self logEnabled]) return;
+    
     if (logConsole) {
-        [XLSharedFacility logMessageWithTag:tag level:level metadata:metadata format:format];
+        [XLSharedFacility logMessageWithTag:tag level:(XLLogLevel)level metadata:metadata format:format];
     }
     
     if (logFile) {
@@ -347,6 +366,8 @@ const NSString *HJLoggerFormatString_Server = @"[%d] %m";
             funcName:(NSString *)funcName
           lineNumber:(NSInteger)lineNumber
             metadata:(NSDictionary<NSString*, id>*)metadata {
+    if (![self logEnabled]) return;
+    
     if (logConsole) {
         [XLSharedFacility logException:exception withTag:tag metadata:metadata];
     }
