@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'HJTraceLogger'
-  s.version      = '2.0.2'
+  s.version      = '2.0.3'
   
   s.ios.deployment_target = '10.0'
   
@@ -25,6 +25,8 @@ Pod::Spec.new do |s|
   
   s.subspec 'Mars' do |ss|
     ss.source_files = 'HJTraceLogger/Mars/**/*.{h,m,mm,cc}'
+    ss.public_header_files = 'HJTraceLogger/Mars/Public/**/*.h'
+    ss.private_header_files = 'HJTraceLogger/Mars/Private/**/*.h'
     ss.vendored_frameworks = 'HJTraceLogger/Mars/**/*.{framework}'
     ss.frameworks   = 'CoreTelephony', 'SystemConfiguration'
     ss.dependency 'HJTraceLogger/Public'

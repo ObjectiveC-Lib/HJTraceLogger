@@ -6,7 +6,6 @@
 //
 
 #import "ViewController.h"
-#import <HJTraceLogger/HJTraceLogger.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 
 @interface ViewController ()
